@@ -1,0 +1,23 @@
+Retail360/
+├── backend/
+│   ├── api/
+│   ├── models/
+│   ├── services/
+│   └── app.js (Express / FastAPI)
+├── frontend/
+│   ├── components/
+│   ├── pages/
+│   └── App.js (React / Next.js)
+├── datasets/
+│   ├── network_planning.csv
+│   ├── demand_forecast.csv
+│   └── customer_experience.csv
+├── notebooks/
+│   ├── network_analysis.ipynb
+│   ├── demand_forecasting.ipynb
+│   └── feedback_analysis.ipynb
+├── ml_models/
+│   ├── demand_model.pkl
+│   └── clustering_model.pkl
+├── README.md
+└── requirements.txt

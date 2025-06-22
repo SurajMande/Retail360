@@ -1,0 +1,23 @@
+frontend/
+├── public/
+├── src/
+│   ├── assets/                → Static images/icons
+│   ├── components/            → Reusable UI components
+│   │   ├── Navbar.jsx
+│   │   ├── Sidebar.jsx
+│   │   ├── Card.jsx
+│   ├── pages/                 → Views per feature/module
+│   │   ├── Home.jsx
+│   │   ├── StorePlanner.jsx   → For location suggestions
+│   │   ├── Forecast.jsx       → Graphs for product demand
+│   │   ├── Feedback.jsx       → Customer experience data
+│   ├── services/              → API functions
+│   │   ├── api.js             → Axios base config
+│   │   ├── demandService.js   → /forecast-demand calls
+│   │   └── locationService.js → /suggest-location calls
+│   ├── utils/                 → Helper functions
+│   ├── App.jsx
+│   └── main.jsx
+├── .env
+├── tailwind.config.js
+└── package.json

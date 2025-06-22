@@ -1,0 +1,15 @@
+backend/
+├── api/
+│   ├── demandForecast.js     → POST /forecast-demand
+│   ├── locationSuggest.js    → POST /suggest-location
+│   ├── feedbackAnalysis.js   → POST /customer-feedback
+├── models/
+│   └── demand_model.pkl      → Trained ML model
+├── services/
+│   ├── mlExecutor.js         → Run Python models from Node
+│   └── utils.js              → Data formatting
+├── data/
+│   └── sample_data.csv
+├── app.js
+├── .env
+└── package.json
