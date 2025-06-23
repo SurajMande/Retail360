@@ -1,15 +1,18 @@
 backend/
-├── api/
-│   ├── demandForecast.js     → POST /forecast-demand
-│   ├── locationSuggest.js    → POST /suggest-location
-│   ├── feedbackAnalysis.js   → POST /customer-feedback
-├── models/
-│   └── demand_model.pkl      → Trained ML model
-├── services/
-│   ├── mlExecutor.js         → Run Python models from Node
-│   └── utils.js              → Data formatting
-├── data/
-│   └── sample_data.csv
+├── controllers/
+│   ├── demandController.js        → Handles /forecast-demand
+│   ├── locationController.js      → Handles /suggest-location
+│   └── feedbackController.js      → Handles /customer-feedback
+├── python_scripts/
+│   ├── forecast_runner.py
+│   ├── cluster_runner.py
+│   └── feedback_runner.py
+├── routes/
+│   ├── demandRoutes.js
+│   ├── locationRoutes.js
+│   └── feedbackRoutes.js
+├── utils/
+│   └── runPython.js               → Handles Node→Python bridge
 ├── app.js
-├── .env
-└── package.json
+├── package.json
+└── .env
