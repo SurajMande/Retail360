@@ -16,3 +16,14 @@ backend/
 ├── app.js
 ├── package.json
 └── .env
+
+jupyter nbconvert --to notebook --execute demand_forecasting.ipynb --output executed_demand_forecasting_notebook.ipynb
+
+curl -X POST http://localhost:8080/forecast-demand \
+  -H "Content-Type: application/json" \
+  -d '{"region":"R001","product":"Laptop","days":30}'
+
+  curl http://localhost:8080/
+
+  ~/.local/bin/jupyter nbconvert --to notebook --execute network_analysis.ipynb --output executed_network_analysis_notebook.ipynb
+

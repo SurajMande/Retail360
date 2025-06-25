@@ -5,7 +5,7 @@ from prophet.serialize import model_from_json
 import pandas as pd
 
 def load_model(region, product):
-    path = f"ml_models/prophet_model_{region}_{product}.json"
+    path = f"/home/samande371322/Retail360/ml_models/prophet_model_{region}_{product}.json"
     with open(path, "r") as f:
         model = model_from_json(f.read())
     return model
@@ -15,7 +15,9 @@ def forecast(region, product, days=30):
     future = model.make_future_dataframe(periods=days)
     forecast = model.predict(future)
     output = forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail(days)
+    output['ds'] = output['ds'].astype(str)
     return output.to_dict(orient="records")
+
 
 if __name__ == "__main__":
     region = sys.argv[1]
